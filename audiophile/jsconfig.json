@@ -1,0 +1,21 @@
+{
+"compilerOptions": {
+  "baseUrl": ".",
+"paths": {
+  "@/*": ["src/*"],
+  "@/convex/*": ["convex/*"]
+},
+  "jsx": "react-jsx",
+  "lib": ["dom", "esnext"],
+  "module": "esnext",
+  "moduleResolution": "node",
+  "target": "esnext",
+  "allowJs": true,
+  "strict": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true
+}
+
+  
+}
