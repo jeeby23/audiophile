@@ -27,8 +27,9 @@
 //     </html>
 //   );
 // }
-import { ConvexClientProvider } from "./ConvexClientProvider";
+import { ConvexClientProvider,ConvexReactClient  } from "./ConvexClientProvider";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { convex } from "@/lib/convexClient";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import './globals.css'
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <ConvexClientProvider client={convex}>{children}</ConvexClientProvider>
       </body>
     </html>
   );
