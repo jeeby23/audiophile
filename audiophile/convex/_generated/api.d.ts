@@ -10,7 +10,9 @@
 
 import type * as cart from "../cart.js";
 import type * as checkout from "../checkout.js";
+import type * as email from "../email.js";
 import type * as functions from "../functions.js";
+import type * as order from "../order.js";
 
 import type {
   ApiFromModules,
@@ -29,7 +31,9 @@ import type {
 declare const fullApi: ApiFromModules<{
   cart: typeof cart;
   checkout: typeof checkout;
+  email: typeof email;
   functions: typeof functions;
+  order: typeof order;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
 

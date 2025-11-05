@@ -40,7 +40,15 @@ export default function CategoryCard({ title, imageSrc, href = '/' }) {
           href={href}
           className="inline-flex items-center gap-2 font-bold text-[13px] uppercase text-[#000000] opacity-50 hover:text-[#D87D4A] hover:opacity-100 transition-all"
         >
-          <span>Shop</span>
+            <div className='inline-flex items-center gap-2'>
+                 <span>Shop</span>
+           <Image
+          src="/Path.png"
+          alt={title}
+          width={5}
+          height={5}/>          
+         
+            </div>
         </Link>
       </div>
     </div>

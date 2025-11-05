@@ -69,7 +69,7 @@ export default function CheckoutModal({ form }) {
       })
 
       // Clear the cart after successful checkout
-      await clearCart()
+    //   await clearCart()
 
       // Navigate to success page
       router.push('/success')

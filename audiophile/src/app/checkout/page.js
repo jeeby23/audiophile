@@ -58,9 +58,9 @@ export default function page() {
         <h1 className="font-manrope text-[15px] leading-[25px] text-black opacity-60 mt-20 mb-10 cursor-pointer hover:text-[#D87D4A] transition">
           Go Back
         </h1>
-        <div className=" w-full  sm:max-w-[689px] lg:max-w-[1110px] p-8 md:p-10 bg-white rounded-2xl flex sm:flex-col lg:flex-row flex-col gap-10 items-start">
+        <div className="w-full max-w-[1110px] mx-auto bg-white rounded-2xl flex flex-col lg:flex-row gap-10 items-start p-4 sm:p-8 md:p-10">
           <div>
-            <section className=" max-w-[327px] sm:max-w-[689px] lg:w-[630px] shadow-lg p-8">
+            <section className="w-full shadow-lg p-6 sm:p-8 rounded-xl">
               <div>
                 <h1 className="font-manrope font-bold text-3xl mb-10 text-[#101010]">Checkout</h1>
 
@@ -129,7 +129,7 @@ export default function page() {
                         />
                       </div>
 
-                      <div className="grid sm:grid-cols-2 gap-6 mt-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                           <Label htmlFor="zip" className="text-sm font-medium text-gray-700">
                             Zip Code
@@ -176,12 +176,12 @@ export default function page() {
                         Payment Details
                       </h2>
 
-                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+<div className="flex flex-col md:flex-row md:items-start justify-between gap-6 w-full">
                         <p className="text-gray-800 font-medium mt-1">Payment Method</p>
 
                         <div className="flex flex-col space-y-4 w-full md:w-[320px]">
                           <RadioGroup defaultValue="e-money" className="space-y-4">
-                            <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition">
+                           <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition w-full">
                               <RadioGroupItem
                                 value="e-money"
                                 id="e-money"
@@ -192,7 +192,7 @@ export default function page() {
                               </Label>
                             </div>
 
-                            <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition">
+                            <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition w-full">
                               <RadioGroupItem value={form.name} onChange={handleChange} id="cash" />
                               <Label htmlFor="cash" className="font-medium text-gray-700">
                                 Cash on Delivery
@@ -239,7 +239,7 @@ export default function page() {
             </section>
           </div>
 
-          <div className="w-full">
+         <div className="w-full lg:w-[40%] mt-6 lg:mt-0">
            <ChecoutModal form={form} />
           </div>
         </div>

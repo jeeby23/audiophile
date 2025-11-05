@@ -18,13 +18,6 @@ import { anyApi, componentsGeneric } from "convex/server";
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-import { ConvexReactClient } from "convex/react";
-
-const convex = new ConvexReactClient(
-  process.env.NEXT_PUBLIC_CONVEX_URL
-);
-
-export default convex;
 export const api = anyApi;
 export const internal = anyApi;
 export const components = componentsGeneric();
