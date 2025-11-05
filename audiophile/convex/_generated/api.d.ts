@@ -9,7 +9,7 @@
  */
 
 import type * as cart from "../cart.js";
-import type * as functions_checkout from "../Functions/checkout.js";
+import type * as checkout from "../checkout.js";
 import type * as functions from "../functions.js";
 
 import type {
@@ -28,7 +28,7 @@ import type {
  */
 declare const fullApi: ApiFromModules<{
   cart: typeof cart;
-  "functions/checkout": typeof functions_checkout;
+  checkout: typeof checkout;
   functions: typeof functions;
 }>;
 declare const fullApiWithMounts: typeof fullApi;

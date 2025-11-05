@@ -72,7 +72,7 @@ export default function CheckoutModal({ form }) {
       await clearCart()
 
       // Navigate to success page
-      router.push('/checkout-success')
+      router.push('/success')
     } catch (err) {
       console.error(err)
       alert('❌ Something went wrong. Please try again.')
