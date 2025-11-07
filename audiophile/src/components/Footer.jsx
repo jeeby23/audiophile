@@ -38,7 +38,7 @@ export default function Footer() {
                 out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
               </p>
 
-              <div className=" flex gap-[2.5px] mt-6 sm:mt-0">
+              <div className=" flex gap-[2.5px] mt-6 sm:mt-0 hover:bg-[#D87D4A]">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faFacebookF} className="text-white" />
                 </a>
