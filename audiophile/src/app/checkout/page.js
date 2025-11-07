@@ -36,11 +36,14 @@ export default function page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createCheckout({
-      ...form,
-      totalAmount,
-      cartItems,
-    })
+   await createCheckout({
+  ...form,
+  items: cartItems,
+  totalAmount,
+  shippingFee: 50,  // if applicable
+  vat: totalAmount * 0.2, // example value
+  grandTotal: totalAmount + 50 + totalAmount * 0.2,
+})
     alert('✅ Checkout details saved successfully!')
   }
   return (

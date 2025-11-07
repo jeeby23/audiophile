@@ -1,4 +1,4 @@
-import { mutation } from "./_generated/server";
+import { mutation, action } from "./_generated/server";
 import { v } from "convex/values";
 
 export const createCheckout = mutation({
@@ -31,15 +31,6 @@ export const createCheckout = mutation({
       ...args,
       createdAt: Date.now(),
     });
-
-    // Call the email action
-    await ctx.runAction("sendOrderEmail", {
-      email: args.email,
-      name: args.name,
-      orderId,
-      grandTotal: args.grandTotal,
-    });
-
     return orderId;
   },
 });

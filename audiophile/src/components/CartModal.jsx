@@ -8,23 +8,36 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function CartModal({ isOpen, onClose }) {
+  const [mounted, setMounted] = useState(false);
+  const [showTwoButtons, setShowTwoButtons] = useState(true);
+
+  // ✅ Always declare hooks before any conditional return
   const cart = useQuery(api.cart.getCart);
   const clearCart = useMutation(api.cart.clearCart);
-  const updateQuantity = useMutation(api.cart.updateQuantity); 
-
-  const [showTwoButtons, setShowTwoButtons] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const updateQuantity = useMutation(api.cart.updateQuantity);
 
   useEffect(() => setMounted(true), []);
-  if (!mounted || !isOpen) return null;
-  if (!cart) return null; 
 
-  
+  // Disable scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  // ✅ Now handle conditions AFTER hooks
+  if (!mounted || !isOpen) return null;
+  if (!cart) return null;
+
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  
   const handleQuantityChange = async (item, newQuantity) => {
-    if (newQuantity < 1) return; 
+    if (newQuantity < 1) return;
     try {
       await updateQuantity({
         itemId: item._id,
@@ -53,10 +66,7 @@ export default function CartModal({ isOpen, onClose }) {
         ) : (
           <ul className="space-y-3">
             {cart.map((item) => (
-              <li
-                key={item._id}
-                className="flex  items-center justify-between gap-4"
-              >
+              <li key={item._id} className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <Image
                     src={item.image}
@@ -71,7 +81,6 @@ export default function CartModal({ isOpen, onClose }) {
                   </div>
                 </div>
 
-               
                 {showTwoButtons && (
                   <div className="flex items-center bg-gray-300 h-8 px-2 rounded">
                     <button
@@ -82,9 +91,7 @@ export default function CartModal({ isOpen, onClose }) {
                     >
                       -
                     </button>
-                    <span className="px-3 text-black text-sm">
-                      {item.quantity}
-                    </span>
+                    <span className="px-3 text-black text-sm">{item.quantity}</span>
                     <button
                       onClick={() =>
                         handleQuantityChange(item, item.quantity + 1)
