@@ -29,19 +29,28 @@ export default function Headphones() {
         <section className="mt-40">
           <Marktwo/>
         </section>
+         </Container>
+         <Container>
+
         <section className="mt-40">
           <Markone/>
         </section>
+         </Container>
+        <Container>
         <section className="mt-40">
           <Headphone59/>
         </section>
+        </Container>
+       
         <section className="mt-40">
           <Categorylist/>
         </section>
+         <Container>    
         <section className="mt-40">
           <Bitmapdetailes/>
         </section>
-      </Container>
+        </Container>
+     
       <section className="mt-40">
         <Footer />
       </section>

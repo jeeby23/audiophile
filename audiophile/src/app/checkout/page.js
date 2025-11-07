@@ -8,9 +8,8 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useEffect, useState } from 'react'
-
 import { useMutation } from 'convex/react'
-import { api } from '@/../convex/_generated/api'
+import { api } from '../../../convex/_generated/api'
 import useCartStore from '@/store/useCartStore'
 
 export default function page() {
@@ -58,7 +57,7 @@ export default function page() {
         <h1 className="font-manrope text-[15px] leading-[25px] text-black opacity-60 mt-20 mb-10 cursor-pointer hover:text-[#D87D4A] transition">
           Go Back
         </h1>
-        <div className="w-full max-w-[1110px] mx-auto bg-white rounded-2xl flex flex-col lg:flex-row gap-10 items-start p-4 sm:p-8 md:p-10">
+        <div className="w-full  mx-auto bg-white rounded-2xl flex flex-col lg:flex-row gap-10 items-start p-4 sm:p-8 md:p-10">
           <div>
             <section className="w-full shadow-lg p-6 sm:p-8 rounded-xl">
               <div>
@@ -176,12 +175,12 @@ export default function page() {
                         Payment Details
                       </h2>
 
-<div className="flex flex-col md:flex-row md:items-start justify-between gap-6 w-full">
+                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 w-full">
                         <p className="text-gray-800 font-medium mt-1">Payment Method</p>
 
                         <div className="flex flex-col space-y-4 w-full md:w-[320px]">
                           <RadioGroup defaultValue="e-money" className="space-y-4">
-                           <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition w-full">
+                            <div className="flex items-center justify-between border border-gray-300 rounded-xl p-4 hover:border-[#D87D4A] transition w-full">
                               <RadioGroupItem
                                 value="e-money"
                                 id="e-money"
@@ -239,8 +238,8 @@ export default function page() {
             </section>
           </div>
 
-         <div className="w-full lg:w-[40%] mt-6 lg:mt-0">
-           <ChecoutModal form={form} />
+          <div className="w-full lg:w-[40%] mt-6 lg:mt-0">
+            <ChecoutModal form={form} />
           </div>
         </div>
       </Container>

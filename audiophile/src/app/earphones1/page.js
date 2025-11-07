@@ -24,6 +24,7 @@ export default function page() {
       <Container>
         <h1 className="font-manrope font-normal text-[15px] leading-[25px] tracking-[0px] text-black opacity-50 w-[57px] h-[25px] mt-[79px] mb-14">
           Go Back
+          
         </h1>
         <Details
           imageSrc="/ear.jpg"
@@ -37,6 +38,9 @@ export default function page() {
           button2Label="Learn More"
           reverseLayout={true}
         />
+         </Container>
+
+         <Container>
         <Headfeatures
           description="Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound."
           descriptionone="The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black"
@@ -48,19 +52,27 @@ export default function page() {
             { qty: 1, name: 'Travel Pouch' },
           ]}
         />
+         </Container>
+         <Container>
+
         <section>
           <Gallerysection images={galleryImages} />
         </section>
+         </Container>
+         <Container>
+
         <section>
           <Typeheadphone />
         </section>
+         </Container>
         <section>
           <Categorylist />
         </section>
+        <Container>
         <section>
           <Bitmapdetailes />
         </section>
-      </Container>
+        </Container>
       <Footer/>
     </section>
   )

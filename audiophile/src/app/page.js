@@ -14,11 +14,11 @@ import { useState } from 'react'
 export default function Page() {
   return (
     <section>
-      <section className="bg-[#0E0E0E] relative z-10">
+      <section className="bg-[#131313] relative z-10">
         <Hero>
           <Navbar />
           <Container>
-            <section className="mb-[70px] lg:mb-[120px] sm:mb-24 bg-[#0E0E0E] ">
+            <section className="mb-[70px] lg:mb-[120px] sm:mb-24 bg-[#131313] ">
               <div className="flex flex-col md:flex-row items-center justify-between gap-[46.6px] text-center md:text-left relative ">
                 <div className="absolute md:relative md:order-2 inset-0 md:inset-auto flex justify-center md:justify-end w-full md:w-auto pointer-events-none md:pointer-events-auto">
                   <Image
@@ -54,13 +54,14 @@ export default function Page() {
           </Container>
         </Hero>
       </section>
-
-      <Categorylist />
+     <section>
+      <Categorylist/>
+     </section>
       <section className="mt-[168px] lg:mb-0">
         <Container>
           <div
-            className="bg-[url('/Group4.png')] bg-cover bg-center bg-[#D87D4A] grid lg:grid-cols-2 sm:grid-cols-1 items-center gap-[138px] rounded-lg 
-      max-w-screen min-h-[600px] sm:max-w-[689px] sm:min-h-[720px] lg:max-w-[1110px] lg:h-[560px] 
+            className="bg-[url('/Group4.png')] bg-cover bg-center bg-[#D87D4A] grid lg:grid-cols-2 sm:grid-cols-1 items-center gap-[118px]  rounded-lg 
+      max-w-screen min-h-[600px] sm:max-w-[689px] sm:min-h-0 lg:max-w-[1400px] lg:h-auto 
       sm:text-center sm:justify-items-center mx-auto"
           >
             <div>
@@ -69,7 +70,7 @@ export default function Page() {
                 alt="speaker"
                 width={410.23}
                 height={493}
-                className="object-contain w-[172.25px] h-[207px] lg:ml-[117px] mt-24 lg:w-[410.23px] lg:h-[493px] sm:w-[197.21px] sm:h-[237px] mx-auto"
+                className="object-contain w-[172.25px] h-[207px] lg:ml-[200px] mt-24 lg:w-[410.23px] lg:h-[493px] sm:w-[197.21px] sm:h-[237px] mx-auto "
                 priority
               />
             </div>
@@ -84,7 +85,6 @@ export default function Page() {
               </p>
               <div className="w-40 h-12 bg-black text-white flex justify-center items-center mb-10">
                 <Button className="font-manrope font-bold text-[13px] tracking-[1px] uppercase w-[99px] h-[18px]">
-                 
                   <Link href="/speaker1"> SEE PRODUCT</Link>
                 </Button>
               </div>
@@ -94,8 +94,8 @@ export default function Page() {
       </section>
       <section>
         <Container>
-          <div className="bg-[url('/Bitmapk.png')] bg-cover bg-center sm:max-w- lg:max-w-[1110px] h-80 my-12">
-            <div className="w-[204px] h-[118px] pl-24 py-[101px]">
+          <div className="bg-[url('/Bitmapk.png')] bg-cover bg-center sm:max-w-auto lg:max-w-[1440px] h-80 my-12 px-3">
+            <div className="w-[204px h-[118px] pl-24 py-[101px]">
               <span className="w-[202px] h-[38px]">
                 <h1 className="font-manrope font-bold text-[28px] leading-[100%] tracking-[2px] uppercase   whitespace-nowrap">
                   ZX7 SPEAKER
@@ -103,14 +103,13 @@ export default function Page() {
               </span>
               <div className="w-40 h-12 ">
                 <button className="font-manrope font-bold text-[13px] leading-[100%] tracking-[1px] uppercase sm:mb-10 lg:mt-8 border border-[#000000] py-[15px] px-[31px]  whitespace-nowrap">
-                 
                   <Link href="/speaker2"> See Product</Link>
                 </button>
               </div>
             </div>
           </div>
           <section className="">
-            <div className="flex flex-col sm:flex-row lg:flex-row gap-10 sm:gap-8 lg:gap-[30px]">
+            <div className="flex flex-col sm:flex-row lg:flex-row gap-10 sm:gap-8 lg:gap-[30px] ">
               {/* Image section */}
               <div>
                 <Image
@@ -124,8 +123,8 @@ export default function Page() {
               </div>
 
               {/* Text section */}
-              <div className="bg-[#F1F1F1] sm:w-[339px] sm:h-80 lg:w-[540px] lg:h-80 flex flex-col items-center justify-center">
-                <div className="max-w-[247px] h-80 text-center sm:text-left flex flex-col justify-center items-center sm:items-start">
+              <div className="bg-[#F1F1F1] sm:w-[339px] sm:h-80 lg:w-[540px] lg:h-80 flex flex-col items-center justify-start">
+                <div className=" h-80 text-center sm:text-left flex flex-col justify-center items-center sm:items-start">
                   <h1 className="font-manrope font-bold text-[28px] leading-[100%] tracking-[2px] uppercase">
                     YX1 EARPHONES
                   </h1>

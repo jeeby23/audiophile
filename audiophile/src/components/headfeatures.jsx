@@ -5,7 +5,7 @@ export default function HeadFeatures({
   boxItems = [],
 }) {
   return (
-    <section className="lg:max-w-[1110px] lg:min-h-[318px] sm:py-[120px] lg:py-40">
+    <section className="lg:max-w-[1440px] lg:min-h-[318px] sm:py-[120px] lg:py-40">
       <div className="flex flex-col lg:flex-row sm:flex-col items-start lg:gap-[125px]">
         <div className="lg:w-[635px] lg:h-[318px]">
           <h1 className="font-manrope font-bold text-[32px] leading-9 tracking-[1.14px] uppercase py-8">

@@ -27,13 +27,15 @@ export default function earphones() {
         <section className="mt-40">
           <Earphonewire />
         </section>
+         </Container>
         <section className="mt-40">
           <Categorylist/>
         </section>
+         <Container>
         <section className="mt-40">
           <Bitmapdetailes />
         </section>
-      </Container>
+         </Container>
       <section className="mt-40">
         <Footer />
       </section>
