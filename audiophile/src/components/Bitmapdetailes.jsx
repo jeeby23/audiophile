@@ -28,7 +28,6 @@ export default function Bitmapdetailes() {
             className="cursor-pointer w-[327px] h-[300px] sm:w-[689px] sm:h-[300px] lg:w-[540px] lg:h-[588px]"
           />
         </div>
-
       </div>
     </section>
   )

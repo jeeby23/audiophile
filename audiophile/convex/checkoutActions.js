@@ -61,9 +61,9 @@ export const processCheckout = action({
     grandTotal: v.float64(),
   },
   handler: async (ctx, args) => {
-    const orderId = await ctx.runMutation("checkout:createCheckout", args);
+    const orderId = await ctx.runMutation("checkoutActions:createCheckout", args);
 
-    await ctx.runAction("sendOrderEmail", {
+    await ctx.runAction("email:sendOrderEmail", {
       email: args.email,
       name: args.name,
       orderId,

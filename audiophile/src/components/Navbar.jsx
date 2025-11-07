@@ -36,7 +36,7 @@ export default function Navbar() {
         </div>
 
         <ul className={`hidden md:flex gap-8 text-[#FFFFFF] uppercase tracking-[2px] text-[13px] leading-[25px] ${manrope.className}`}>
-          <li><Activelink href="/">Home</Activelink></li>
+          <li ><Activelink href="/">Home</Activelink></li>
           <li><Activelink href="/headphones">Headphones</Activelink></li>
           <li><Activelink href="/speakers">Speakers</Activelink></li>
           <li><Activelink href="/earphones">Earphones</Activelink></li>
